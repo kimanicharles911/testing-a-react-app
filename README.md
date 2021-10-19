@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Testing A React App (Reactjs, Jest) 
+## Description
+This a repository of create-react-app upon which testing has been conducted using Jest. The following resources were used to learn how to make the Jest tests:
+* jestjs.io/docs/getting-started 
+* jestjs.io/docs/snapshot-testing
+* github.com/facebook/jest/tree/main/examples/snapshot
+* [HyperionDev task 15](https://github.com/kimanicharles911/testing-a-react-app/blob/master/WD_L2T15_React_VI_Testing_a_React_App.pdf)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+It contains 3 Jest test:
+* Link Test
+* Clock Test
+* Sum Test
 
-In the project directory, you can run:
+## Deployed at
+* This is for development testing purposes only hence doesn't require deployment.
 
-### `yarn start`
+## Setup/Installation Requirements
+##### Install Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##### Run React Development Server
 
-### `yarn test`
+```
+npm run start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Test React Application
 
-### `yarn build`
+```
+npm run test
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### To Build for Production
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm run build
+Know how to host at heroku.com - https://dev.to/destrodevshow/how-to-deploy-react-app-to-heroku-in-5-minutes-3dni
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+heroku login
+git add . && git commit -m"your commit message" && git push heroku master
+```
 
-### `yarn eject`
+## How It Was Built
+##### Create React App
+```
+npx create-react-app 
+npm i react-test-renderer
+```
+##### Dependencies
+* React Test Renderer
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### src folder structure
+```
+src/
+  snapshot/
+    Clock.react.js
+    Link.react.js
+    package.json
+    sum.js
+  __tests__/
+    __snapshots__
+      clock.react.test.js.snap
+      link.react.test.js.snap
+    clock.react.test.js
+    link.react.test.js
+    sum.test.js
+  App.css
+  App.test.js
+  index.js
+  reportWebVitals.js
+  App.js 
+  index.css
+  logo.svg
+  setupTests.js
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License and Copyright Information.
+See [my MIT LICENSE](https://github.com/kimanicharles911/testing-a-react-app/blob/master/LICENSE.txt) for details.
